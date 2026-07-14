@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import FleetCarousel from "../components/FleetCarousel";
 
 function Home() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
 
@@ -9,7 +13,12 @@ function Home() {
 
       <nav className="navbar">
 
-        <Link to="/" className="logo">
+        {/* Logo */}
+
+        <Link
+          to="/"
+          className="logo"
+        >
 
           <img
             src="/images/logo/shm-logo.PNG"
@@ -21,6 +30,8 @@ function Home() {
           </span>
 
         </Link>
+
+        {/* Desktop Menu */}
 
         <ul className="nav-links">
 
@@ -46,16 +57,57 @@ function Home() {
 
         </ul>
 
-        <a
-          href="https://wa.me/358449408543?text=Hello%20SHM%20Infinity,%20I'd%20like%20to%20book%20a%20taxi."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="book-btn"
+        {/* Mobile Hamburger */}
+
+        <button
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
         >
-          Book Now
-        </a>
+          ☰
+        </button>
 
       </nav>
+
+      {/* ================= MOBILE MENU ================= */}
+
+      <div className={menuOpen ? "mobile-menu active" : "mobile-menu"}>
+
+        <Link
+          to="/"
+          onClick={() => setMenuOpen(false)}
+        >
+          Home
+        </Link>
+
+        <a
+          href="#fleet"
+          onClick={() => setMenuOpen(false)}
+        >
+          Fleet
+        </a>
+
+        <a
+          href="#services"
+          onClick={() => setMenuOpen(false)}
+        >
+          Services
+        </a>
+
+        <a
+          href="#about"
+          onClick={() => setMenuOpen(false)}
+        >
+          About
+        </a>
+
+        <Link
+          to="/contact"
+          onClick={() => setMenuOpen(false)}
+        >
+          Contact
+        </Link>
+
+      </div>
 
       {/* ================= HERO ================= */}
 
@@ -117,7 +169,10 @@ function Home() {
 
       </section>      {/* ================= SERVICES ================= */}
 
-      <section id="services" className="services">
+      <section
+        id="services"
+        className="services"
+      >
 
         <h2 className="section-title">
           Our Premium Services
