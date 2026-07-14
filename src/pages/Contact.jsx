@@ -7,22 +7,24 @@ function Contact() {
 
       <nav className="navbar">
 
-        <div className="logo">
+        <Link to="/" className="logo">
 
-          <Link to="/">
+          <img
+            src="/images/logo/shm-logo.PNG"
+            alt="SHM Infinity"
+          />
 
-            <img
-              src="/images/logo/shm-logo.PNG"
-              alt="SHM Infinity"
-            />
+          <span className="logo-text">
+            SHMINFINITY<span>.FI</span>
+          </span>
 
-          </Link>
-
-        </div>
+        </Link>
 
         <ul className="nav-links">
 
-          <li><Link to="/">Home</Link></li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
 
           <li>
             <a href="/#fleet">Fleet</a>
@@ -43,7 +45,7 @@ function Contact() {
         </ul>
 
         <a
-          href="https://wa.me/358449408543"
+          href="https://wa.me/358449408543?text=Hello%20SHM%20Infinity,%20I'd%20like%20to%20book%20a%20taxi."
           target="_blank"
           rel="noopener noreferrer"
           className="book-btn"
@@ -74,37 +76,29 @@ function Contact() {
 
         </div>
 
-        <div className="contact-container">          {/* ================= PHONE ================= */}
+        <div className="contact-container">
+
+          {/* PHONE */}
 
           <a
             href="tel:+35841291840"
             className="contact-card"
           >
-
-            <span className="contact-icon">
-              📞
-            </span>
-
+            <span className="contact-icon">📞</span>
             <h3>Phone</h3>
-
           </a>
 
-          {/* ================= EMAIL ================= */}
+          {/* EMAIL */}
 
           <a
             href="mailto:shminfinity@gmail.com"
             className="contact-card"
           >
-
-            <span className="contact-icon">
-              ✉️
-            </span>
-
+            <span className="contact-icon">✉️</span>
             <h3>Email</h3>
-
           </a>
 
-          {/* ================= WHATSAPP ================= */}
+          {/* WHATSAPP */}
 
           <a
             href="https://wa.me/358449408543"
@@ -112,22 +106,15 @@ function Contact() {
             rel="noopener noreferrer"
             className="contact-card"
           >
-
-            <span className="contact-icon">
-              💬
-            </span>
-
+            <span className="contact-icon">💬</span>
             <h3>WhatsApp</h3>
-
           </a>
 
-          {/* ================= FOLLOW US ================= */}
+          {/* FOLLOW */}
 
           <div className="follow-box">
 
-            <h2>
-              Follow Us
-            </h2>
+            <h2>Follow Us</h2>
 
             <div className="social-links">
 
@@ -149,7 +136,9 @@ function Contact() {
 
             </div>
 
-          </div>        </div>
+          </div>
+
+        </div>
 
       </section>
 
@@ -158,7 +147,7 @@ function Contact() {
       <footer className="footer">
 
         <p>
-          All Rights Reserved by SHM Infinity © 2026.
+          © 2026 SHM INFINITY. All Rights Reserved.
         </p>
 
       </footer>
