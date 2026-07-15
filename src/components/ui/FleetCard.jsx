@@ -21,6 +21,18 @@ function FleetCard({ car }) {
           {car.type}
         </span>
 
+        <div className="fleet-details">
+
+          <p>👥 {car.passengers} Passengers</p>
+
+          <p>🧳 {car.luggage} Luggage</p>
+
+          <p>⚙️ {car.transmission}</p>
+
+          <p>⛽ {car.fuel}</p>
+
+        </div>
+
       </div>
 
     </div>
