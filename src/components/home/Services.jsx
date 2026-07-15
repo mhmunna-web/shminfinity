@@ -1,12 +1,14 @@
+import SectionTitle from "../ui/SectionTitle";
+
 const Services = () => {
   return (
     <section
       id="services"
       className="services"
     >
-      <h2 className="section-title">
+      <SectionTitle>
         Our Premium Services
-      </h2>
+      </SectionTitle>
 
       <div className="services-container">
 

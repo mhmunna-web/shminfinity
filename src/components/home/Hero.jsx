@@ -1,3 +1,5 @@
+import Button from "../ui/Button";
+
 const Hero = () => {
   return (
     <section
@@ -20,7 +22,9 @@ const Hero = () => {
           in Finland
         </h1>
 
-        <h2>Trust in Motion</h2>
+        <h2>
+          Trust in Motion
+        </h2>
 
         <p className="hero-description">
           Experience luxury, safety and reliability
@@ -31,21 +35,23 @@ const Hero = () => {
         </p>
 
         <div className="hero-buttons">
-          <a
+
+          <Button
             href="https://wa.me/358449408543?text=Hello%20SHM%20Infinity,%20I'd%20like%20to%20book%20a%20taxi."
             target="_blank"
             rel="noopener noreferrer"
-            className="primary-btn"
+            variant="primary"
           >
             Book Your Ride
-          </a>
+          </Button>
 
-          <a
+          <Button
             href="#fleet"
-            className="secondary-btn"
+            variant="secondary"
           >
             View Our Fleet
-          </a>
+          </Button>
+
         </div>
       </div>
     </section>

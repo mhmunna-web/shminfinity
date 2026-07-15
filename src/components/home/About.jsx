@@ -1,3 +1,6 @@
+import SectionTitle from "../ui/SectionTitle";
+import Button from "../ui/Button";
+
 const About = () => {
   return (
     <section
@@ -12,15 +15,16 @@ const About = () => {
       </div>
 
       <div className="about-content">
+
         <span className="about-subtitle">
           ABOUT SHM INFINITY
         </span>
 
-        <h2>
+        <SectionTitle>
           Premium Taxi Service
           <br />
           Across Finland
-        </h2>
+        </SectionTitle>
 
         <p>
           SHM Infinity provides premium taxi
@@ -35,20 +39,28 @@ const About = () => {
         </p>
 
         <div className="about-features">
+
           <div>✓ Professional Drivers</div>
+
           <div>✓ Luxury Vehicles</div>
+
           <div>✓ Airport Transfer</div>
+
           <div>✓ Business Travel</div>
+
           <div>✓ Fixed Pricing</div>
+
           <div>✓ 24/7 Service</div>
+
         </div>
 
-        <a
+        <Button
           href="#fleet"
-          className="primary-btn"
+          variant="primary"
         >
           Explore Our Fleet
-        </a>
+        </Button>
+
       </div>
     </section>
   );
