@@ -1,0 +1,126 @@
+/* ==========================================
+              RESPONSIVE
+========================================== */
+
+@media (max-width:992px){
+
+    .navbar{
+        padding:0 20px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .logo img{
+        width:65px;
+        height:65px;
+    }
+
+    .logo-text{
+        font-size:28px;
+    }
+
+    .hero{
+        padding:40px;
+        margin-top:90px;
+    }
+
+    .hero-content{
+        max-width:100%;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero h2{
+        font-size:30px;
+    }
+
+    .hero-description{
+        font-size:18px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .services-container{
+        grid-template-columns:1fr;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+        padding:80px 30px;
+    }
+
+    .about-content{
+        text-align:center;
+    }
+
+    .about-content h2{
+        font-size:40px;
+    }
+
+    .about-features{
+        grid-template-columns:1fr;
+    }
+
+    .book-btn{
+        display:none;
+    }
+
+    .hamburger{
+        display:block;
+    }
+}
+
+@media (max-width:768px){
+
+    .swiper{
+        padding:15px 45px 60px;
+    }
+
+    .fleet{
+        padding:80px 20px;
+    }
+
+    .fleet-info h3{
+        font-size:24px;
+    }
+
+    .fleet-info p{
+        font-size:16px;
+    }
+
+    .fleet-image img{
+        height:220px;
+    }
+
+    .contact-page{
+        padding:100px 20px 60px;
+    }
+
+    .contact-header h1{
+        font-size:36px;
+    }
+
+    .social-links{
+        gap:20px;
+    }
+
+    .navbar{
+        height:85px;
+    }
+
+    .logo img{
+        width:60px;
+        height:60px;
+    }
+
+    .logo-text{
+        font-size:24px;
+    }
+}

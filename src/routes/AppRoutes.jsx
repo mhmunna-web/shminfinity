@@ -1,14 +1,36 @@
 import { Routes, Route } from "react-router-dom";
+
+import MainLayout from "../layouts/MainLayout";
+
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
+import Booking from "../pages/Booking";
 
-const AppRoutes = () => {
+function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/contact" element={<Contact />} />
+
+      <Route element={<MainLayout />}>
+
+        <Route
+          path="/"
+          element={<Home />}
+        />
+
+        <Route
+          path="/contact"
+          element={<Contact />}
+        />
+
+        <Route
+          path="/booking"
+          element={<Booking />}
+        />
+
+      </Route>
+
     </Routes>
   );
-};
+}
 
 export default AppRoutes;

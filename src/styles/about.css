@@ -1,0 +1,117 @@
+/* ==========================================
+                  ABOUT
+========================================== */
+
+.about{
+
+    padding:120px 80px;
+
+    background:#000;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.about-image{
+
+    position:relative;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:25px;
+
+    border:2px solid rgba(212,175,55,.25);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+
+    transition:.4s;
+
+}
+
+.about-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.about-subtitle{
+
+    display:block;
+
+    color:#d4af37;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    margin-bottom:20px;
+
+}
+
+.about-content h2{
+
+    font-size:58px;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+    color:#fff;
+
+}
+
+.about-content p{
+
+    color:#d5d5d5;
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+.about-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-bottom:40px;
+
+}
+
+.about-features div{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#fff;
+
+    transition:.3s;
+
+}
+
+.about-features div:hover{
+
+    color:#d4af37;
+
+    transform:translateX(5px);
+
+}

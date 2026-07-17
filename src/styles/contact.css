@@ -1,0 +1,190 @@
+/* ==========================================
+                CONTACT PAGE
+========================================== */
+
+.contact-page{
+    position:relative;
+    min-height:100vh;
+    padding:140px 20px 100px;
+    background-image:url("/images/hero/hero-bg.PNG");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    overflow:hidden;
+}
+
+.contact-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.72);
+}
+
+.contact-content{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:900px;
+}
+
+.contact-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.contact-header h1{
+    color:#d4af37;
+    font-size:64px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.contact-header p{
+    color:#ffffff;
+    font-size:24px;
+    line-height:1.7;
+}/* ==========================================
+            CONTACT CARDS
+========================================== */
+
+.contact-container{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+}
+
+.contact-card{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    padding:28px 32px;
+    background:rgba(18,18,18,.82);
+    border:1px solid rgba(212,175,55,.20);
+    border-radius:22px;
+    text-decoration:none;
+    transition:.35s;
+    backdrop-filter:blur(10px);
+}
+
+.contact-card:hover{
+    transform:translateY(-5px);
+    border-color:#d4af37;
+    box-shadow:0 15px 40px rgba(212,175,55,.20);
+}
+
+.contact-icon{
+    font-size:34px;
+    color:#d4af37;
+    min-width:40px;
+}
+
+.contact-card h3{
+    color:#fff;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.contact-card p{
+    color:#e0e0e0;
+    font-size:18px;
+}/* ==========================================
+              FOLLOW US
+========================================== */
+
+.follow-box{
+    margin-top:40px;
+    text-align:center;
+}
+
+.follow-box h2{
+    color:#d4af37;
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.social-links a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 28px;
+    background:rgba(18,18,18,.82);
+    border:1px solid rgba(212,175,55,.20);
+    border-radius:50px;
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+    transition:.35s;
+}
+
+.social-links a:hover{
+    color:#d4af37;
+    border-color:#d4af37;
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(212,175,55,.20);
+}
+
+.social-icon{
+    font-size:22px;
+}/* ==========================================
+              RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+    .contact-page{
+        padding:120px 20px 80px;
+    }
+
+    .contact-header h1{
+        font-size:42px;
+    }
+
+    .contact-header p{
+        font-size:18px;
+    }
+
+    .contact-card{
+        padding:22px;
+        gap:18px;
+    }
+
+    .contact-icon{
+        font-size:28px;
+    }
+
+    .contact-card h3{
+        font-size:20px;
+    }
+
+    .contact-card p{
+        font-size:16px;
+    }
+
+    .follow-box h2{
+        font-size:28px;
+    }
+
+    .social-links{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .social-links a{
+        width:100%;
+        max-width:320px;
+        justify-content:center;
+    }
+
+}

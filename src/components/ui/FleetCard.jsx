@@ -3,25 +3,24 @@ function FleetCard({ car }) {
     <div className="fleet-card">
 
       <div className="fleet-image">
-        <img
-          src={car.image}
-          alt={car.name}
-        />
+        <img src={car.image} alt={car.name} />
       </div>
 
-      <div className="fleet-info">
-
-        <h3>{car.name}</h3>
-
-        <p>
-          {car.year} • {car.color}
-        </p>
+      <div className="fleet-content">
 
         <span className="fleet-badge">
           {car.type}
         </span>
 
-        <div className="fleet-details">
+        <h3 className="fleet-title">
+          {car.name}
+        </h3>
+
+        <p className="fleet-year">
+          {car.year} • {car.color}
+        </p>
+
+        <div className="fleet-specs">
 
           <p>👥 {car.passengers} Passengers</p>
 
@@ -32,6 +31,10 @@ function FleetCard({ car }) {
           <p>⛽ {car.fuel}</p>
 
         </div>
+
+        <button className="fleet-btn">
+          Book Now
+        </button>
 
       </div>
 

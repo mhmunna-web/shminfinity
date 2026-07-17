@@ -1,104 +1,51 @@
-import { Link } from "react-router-dom";
+import "../styles/contact.css";
+
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 function Contact() {
   return (
-    <>
-      {/* ================= NAVBAR ================= */}
+    <section className="contact-page">
 
-      <nav className="navbar">
+      <div className="contact-overlay"></div>
 
-        <Link to="/" className="logo">
-
-          <img
-            src="/images/logo/shm-logo.PNG"
-            alt="SHM Infinity"
-          />
-
-          <span className="logo-text">
-            SHMINFINITY<span>.FI</span>
-          </span>
-
-        </Link>
-
-        <ul className="nav-links">
-
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-
-          <li>
-            <a href="/#fleet">Fleet</a>
-          </li>
-
-          <li>
-            <a href="/#services">Services</a>
-          </li>
-
-          <li>
-            <a href="/#about">About</a>
-          </li>
-
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-
-        </ul>
-
-        <a
-          href="https://wa.me/358449408543?text=Hello%20SHM%20Infinity,%20I'd%20like%20to%20book%20a%20taxi."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="book-btn"
-        >
-          Book Now
-        </a>
-
-      </nav>
-
-      {/* ================= CONTACT PAGE ================= */}
-
-      <section className="contact-page">
-
-        <div className="contact-overlay"></div>
+      <div className="contact-content">
 
         <div className="contact-header">
 
           <h1>Contact SHM Infinity</h1>
 
-          <p>
-            Premium Taxi Service in Finland
-          </p>
+          <p>Premium Taxi Service in Finland</p>
 
           <p>
-            We're available 24/7.
-            Choose your preferred way to contact us.
+            We are available 24/7.
+            Contact us anytime for bookings or enquiries.
           </p>
 
         </div>
 
         <div className="contact-container">
 
-          {/* PHONE */}
-
-          <a
-            href="tel:+35841291840"
-            className="contact-card"
-          >
-            <span className="contact-icon">📞</span>
-            <h3>Phone</h3>
+          <a href="tel:+35841291840" className="contact-card">
+            <FaPhoneAlt className="contact-icon" />
+            <div>
+              <h3>Phone</h3>
+              <p>+358 41 291 8840</p>
+            </div>
           </a>
 
-          {/* EMAIL */}
-
-          <a
-            href="mailto:shminfinity@gmail.com"
-            className="contact-card"
-          >
-            <span className="contact-icon">✉️</span>
-            <h3>Email</h3>
+          <a href="mailto:shminfinity@gmail.com" className="contact-card">
+            <FaEnvelope className="contact-icon" />
+            <div>
+              <h3>Email</h3>
+              <p>shminfinity@gmail.com</p>
+            </div>
           </a>
-
-          {/* WHATSAPP */}
 
           <a
             href="https://wa.me/358449408543"
@@ -106,11 +53,12 @@ function Contact() {
             rel="noopener noreferrer"
             className="contact-card"
           >
-            <span className="contact-icon">💬</span>
-            <h3>WhatsApp</h3>
+            <FaWhatsapp className="contact-icon" />
+            <div>
+              <h3>WhatsApp</h3>
+              <p>Chat with us instantly</p>
+            </div>
           </a>
-
-          {/* FOLLOW */}
 
           <div className="follow-box">
 
@@ -123,7 +71,8 @@ function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                📘 Facebook
+                <FaFacebookF className="social-icon" />
+                <span>Facebook</span>
               </a>
 
               <a
@@ -131,7 +80,8 @@ function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                📷 Instagram
+                <FaInstagram className="social-icon" />
+                <span>Instagram</span>
               </a>
 
             </div>
@@ -140,19 +90,9 @@ function Contact() {
 
         </div>
 
-      </section>
+      </div>
 
-      {/* ================= FOOTER ================= */}
-
-      <footer className="footer">
-
-        <p>
-          © 2026 SHM INFINITY. All Rights Reserved.
-        </p>
-
-      </footer>
-
-    </>
+    </section>
   );
 }
 

@@ -1,101 +1,117 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
-const Navbar = () => {
+function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
-      {/* ================= NAVBAR ================= */}
+      <header className="navbar">
 
-      <nav className="navbar">
-        {/* Logo */}
+        <div className="navbar-container">
 
-        <Link to="/" className="logo">
-          <img
-            src="/images/logo/shm-logo.PNG"
-            alt="SHM Infinity"
-          />
+          {/* Logo */}
 
-          <span className="logo-text">
-            SHMINFINITY<span>.FI</span>
-          </span>
-        </Link>
+          <Link
+            to="/"
+            className="logo"
+            onClick={closeMenu}
+          >
+            <img
+              src="/images/logo/shm-logo.PNG"
+              alt="SHM Infinity"
+            />
 
-        {/* Desktop Menu */}
+            <span className="logo-text">
+              SHMINFINITY<span>.FI</span>
+            </span>
+          </Link>
 
-        <ul className="nav-links">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
+          {/* Desktop Menu */}
 
-          <li>
-            <a href="#fleet">Fleet</a>
-          </li>
+          <ul className="nav-links">
 
-          <li>
-            <a href="#services">Services</a>
-          </li>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
 
-          <li>
-            <a href="#about">About</a>
-          </li>
+            <li>
+              <a href="/#fleet">Fleet</a>
+            </li>
 
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
+            <li>
+              <a href="/#services">Services</a>
+            </li>
 
-        {/* Mobile Hamburger */}
+            <li>
+              <a href="/#about">About</a>
+            </li>
 
-        <button
-          className="hamburger"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          ☰
-        </button>
-      </nav>
+            <li>
+              <NavLink to="/booking">Booking</NavLink>
+            </li>
 
-      {/* ================= MOBILE MENU ================= */}
+            <li>
+              <NavLink to="/contact">Contact</NavLink>
+            </li>
+
+          </ul>
+
+          {/* Book Button */}
+
+          <Link
+            to="/booking"
+            className="book-btn"
+          >
+            Book Now
+          </Link>
+
+          {/* Mobile Menu Button */}
+
+          <button
+            className="hamburger"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            ☰
+          </button>
+
+        </div>
+
+      </header>
+
+      {/* Mobile Menu */}
 
       <div className={menuOpen ? "mobile-menu active" : "mobile-menu"}>
-        <Link
-          to="/"
-          onClick={() => setMenuOpen(false)}
-        >
-          Home
-        </Link>
 
-        <a
-          href="#fleet"
-          onClick={() => setMenuOpen(false)}
-        >
+        <NavLink to="/" onClick={closeMenu}>
+          Home
+        </NavLink>
+
+        <a href="/#fleet" onClick={closeMenu}>
           Fleet
         </a>
 
-        <a
-          href="#services"
-          onClick={() => setMenuOpen(false)}
-        >
+        <a href="/#services" onClick={closeMenu}>
           Services
         </a>
 
-        <a
-          href="#about"
-          onClick={() => setMenuOpen(false)}
-        >
+        <a href="/#about" onClick={closeMenu}>
           About
         </a>
 
-        <Link
-          to="/contact"
-          onClick={() => setMenuOpen(false)}
-        >
+        <NavLink to="/booking" onClick={closeMenu}>
+          Booking
+        </NavLink>
+
+        <NavLink to="/contact" onClick={closeMenu}>
           Contact
-        </Link>
+        </NavLink>
+
       </div>
     </>
   );
-};
+}
 
 export default Navbar;

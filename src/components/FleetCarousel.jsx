@@ -12,17 +12,22 @@ import "swiper/css/effect-coverflow";
 function FleetCarousel() {
   return (
     <section id="fleet" className="fleet">
+
       <SectionTitle>
-        Our Premium Fleet
+        Luxury Fleet
       </SectionTitle>
+
+      <p className="section-subtitle">
+        Executive, Business and Premium vehicles for every journey.
+      </p>
 
       <Swiper
         modules={[Navigation, EffectCoverflow]}
         effect="coverflow"
         navigation
-        grabCursor
-        centeredSlides
-        loop
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
         speed={900}
         slidesPerView={"auto"}
         coverflowEffect={{
@@ -32,20 +37,6 @@ function FleetCarousel() {
           modifier: 1.8,
           scale: 0.92,
           slideShadows: false,
-        }}
-        breakpoints={{
-          320: {
-            slidesPerView: 1,
-            centeredSlides: true,
-          },
-          768: {
-            slidesPerView: "auto",
-            centeredSlides: true,
-          },
-          1024: {
-            slidesPerView: "auto",
-            centeredSlides: true,
-          },
         }}
       >
         {fleetData.map((car) => (
@@ -57,6 +48,7 @@ function FleetCarousel() {
           </SwiperSlide>
         ))}
       </Swiper>
+
     </section>
   );
 }

@@ -1,15 +1,15 @@
-const MainLayout = () => {
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
+import { Outlet } from "react-router-dom";
+
+function MainLayout() {
   return (
     <>
-      {/* Navbar এখানে থাকবে */}
-
-      <main>
-        {/* সব page এখানে দেখাবে */}
-      </main>
-
-      {/* Footer এখানে থাকবে */}
+      <Navbar />
+      <Outlet />
+      <Footer />
     </>
   );
-};
+}
 
 export default MainLayout;
