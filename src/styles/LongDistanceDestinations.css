@@ -1,0 +1,141 @@
+.long-destinations {
+    background: #090909;
+    padding: 120px 80px;
+}
+
+.long-destinations-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.destination-header {
+    max-width: 850px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.destination-tag {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 999px;
+    color: #d4af37;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.destination-header h2 {
+    color: #fff;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.destination-header p {
+    color: #d5d5d5;
+    font-size: 20px;
+    line-height: 1.9;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.destination-card {
+    background: #111111;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 22px;
+    padding: 38px;
+    transition: all .35s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    border-color: #d4af37;
+    box-shadow: 0 18px 45px rgba(212, 175, 55, 0.12);
+}
+
+.route-distance {
+    display: inline-block;
+    color: #d4af37;
+    background: rgba(212, 175, 55, 0.10);
+    border: 1px solid rgba(212, 175, 55, 0.20);
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.destination-card h3 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 18px;
+}
+
+.destination-card p {
+    color: #cfcfcf;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+@media (max-width: 1100px) {
+
+    .long-destinations {
+        padding: 100px 40px;
+    }
+
+    .destination-header h2 {
+        font-size: 50px;
+    }
+
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .long-destinations {
+        padding: 80px 20px;
+    }
+
+    .destination-header {
+        margin-bottom: 50px;
+    }
+
+    .destination-header h2 {
+        font-size: 38px;
+    }
+
+    .destination-header p {
+        font-size: 17px;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .destination-card {
+        padding: 30px;
+    }
+
+    .destination-card h3 {
+        font-size: 24px;
+    }
+
+    .destination-card p {
+        font-size: 16px;
+    }
+
+}

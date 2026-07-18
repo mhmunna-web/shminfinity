@@ -1,87 +1,211 @@
 /* ==========================================
-              SECTION TITLE
+                SECTION TITLE
 ========================================== */
 
-.section-title{
-
-    text-align:center;
-
-    font-size:52px;
-
-    font-weight:800;
-
-    color:#d4af37;
-
-    margin-bottom:70px;
-
+.section-title {
+  text-align: center;
+  font-size: 52px;
+  font-weight: 800;
+  color: #d4af37;
+  letter-spacing: -1px;
+  margin-bottom: 50px;
 }
 
 /* ==========================================
-               SERVICES
+                 SERVICES
 ========================================== */
 
-.services{
+.services {
+  padding: 120px 80px;
+  background: #0b0b0b;
+}
 
-    padding:120px 80px;
+.services-container {
+  max-width: 1300px;
+  margin: 0 auto;
 
-    background:#0b0b0b;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+
+  align-items: stretch;
+}
+
+/* ==========================================
+              SERVICE CARD
+========================================== */
+
+.service-card {
+  background: #111;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 22px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  transition: all 0.35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(212, 175, 55, 0.65);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.45),
+    0 0 18px rgba(212, 175, 55, 0.12);
+}
+
+.service-image {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.45s ease;
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.08);
+}
+
+.service-content {
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.service-content h3 {
+  color: #d4af37;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.service-content p {
+  color: #d7d7d7;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}.service-features {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  flex-grow: 1;
+}
+
+.service-features li {
+  color: #f2f2f2;
+  font-size: 16px;
+  margin-bottom: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ==========================================
+                BUTTON
+========================================== */
+
+.service-btn {
+  display: inline-block;
+  padding: 14px 30px;
+
+  background: #d4af37;
+  color: #000;
+
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+
+  border-radius: 50px;
+
+  transition: all 0.3s ease;
+
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.service-btn:hover {
+  background: #f0c94d;
+  color: #000;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(212, 175, 55, 0.25);
+}
+
+/* ==========================================
+              RESPONSIVE
+========================================== */
+
+@media (max-width: 992px) {
+
+  .services {
+    padding: 90px 30px;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .service-image {
+    height: 220px;
+  }
+
+  .section-title {
+    font-size: 42px;
+    margin-bottom: 45px;
+  }
 
 }
 
-.services-container{
+@media (max-width: 768px) {
 
-    display:grid;
+  .services {
+    padding: 70px 20px;
+  }
 
-    grid-template-columns:repeat(3,1fr);
+  .section-title {
+    font-size: 34px;
+    margin-bottom: 40px;
+  }
 
-    gap:35px;
+  .service-content {
+    padding: 24px;
+  }
 
-}
+  .service-content h3 {
+    font-size: 24px;
+  }
 
-.service-card{
+  .service-content p {
+    font-size: 15px;
+  }
 
-    background:#111;
+  .service-features li {
+    font-size: 15px;
+  }
 
-    border:1px solid rgba(212,175,55,.18);
-
-    border-radius:22px;
-
-    padding:45px 35px;
-
-    transition:.35s;
-
-    cursor:pointer;
-
-}
-
-.service-card:hover{
-
-    transform:translateY(-10px);
-
-    border-color:#d4af37;
-
-    box-shadow:0 20px 45px rgba(212,175,55,.18);
-
-}
-
-.service-card h3{
-
-    color:#d4af37;
-
-    font-size:28px;
-
-    margin-bottom:20px;
-
-    font-weight:700;
-
-}
-
-.service-card p{
-
-    color:#d7d7d7;
-
-    font-size:18px;
-
-    line-height:1.8;
+  .service-btn {
+    width: 100%;
+    text-align: center;
+    align-self: stretch;
+  }
 
 }

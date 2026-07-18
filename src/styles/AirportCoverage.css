@@ -1,0 +1,158 @@
+.airport-coverage {
+    background: #0b0b0b;
+    padding: 120px 80px;
+}
+
+.coverage-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.coverage-tag {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 999px;
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.coverage-container h2 {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.coverage-text {
+    max-width: 850px;
+    margin: 0 auto 70px;
+    color: #d7d7d7;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.coverage-card {
+    background: #111111;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 20px;
+    padding: 35px 20px;
+    transition: all 0.35s ease;
+}
+
+.coverage-card:hover {
+    transform: translateY(-8px);
+    border-color: #d4af37;
+    box-shadow: 0 18px 45px rgba(212, 175, 55, 0.12);
+}
+
+.coverage-icon {
+    display: block;
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.coverage-card h3 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+}.coverage-bottom {
+    margin-top: 70px;
+    padding: 45px 40px;
+    background: #111111;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 24px;
+}
+
+.coverage-bottom h3 {
+    color: #d4af37;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.coverage-bottom p {
+    max-width: 850px;
+    margin: 0 auto;
+    color: #d7d7d7;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+@media (max-width: 1100px) {
+
+    .airport-coverage {
+        padding: 100px 40px;
+    }
+
+    .coverage-container h2 {
+        font-size: 48px;
+    }
+
+    .coverage-text {
+        font-size: 18px;
+    }
+
+    .coverage-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .airport-coverage {
+        padding: 80px 20px;
+    }
+
+    .coverage-tag {
+        font-size: 12px;
+        padding: 10px 22px;
+    }
+
+    .coverage-container h2 {
+        font-size: 36px;
+    }
+
+    .coverage-text {
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    .coverage-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .coverage-card {
+        padding: 28px 20px;
+    }
+
+    .coverage-card h3 {
+        font-size: 20px;
+    }
+
+    .coverage-bottom {
+        margin-top: 50px;
+        padding: 30px 24px;
+    }
+
+    .coverage-bottom h3 {
+        font-size: 24px;
+    }
+
+    .coverage-bottom p {
+        font-size: 16px;
+    }
+}

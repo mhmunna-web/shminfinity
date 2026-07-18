@@ -1,0 +1,121 @@
+.tours-features {
+    padding: 120px 20px;
+    background: #111111;
+}
+
+.tours-features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tours-features-header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 80px;
+}
+
+.tours-features-header span {
+    display: inline-block;
+    color: #d4af37;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.tours-features-header h2 {
+    font-size: 48px;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.tours-features-header p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.tours-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.tours-feature-card {
+    background: #1b1b1b;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    border-radius: 22px;
+    padding: 40px;
+    transition: all .35s ease;
+}
+
+.tours-feature-card:hover {
+    transform: translateY(-10px);
+    border-color: #d4af37;
+    box-shadow: 0 20px 45px rgba(212, 175, 55, 0.18);
+}
+
+.feature-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, .12);
+    color: #d4af37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.tours-feature-card h3 {
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.tours-feature-card p {
+    color: rgba(255,255,255,.72);
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+@media (max-width: 992px) {
+
+    .tours-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tours-features-header h2 {
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .tours-features {
+        padding: 90px 20px;
+    }
+
+    .tours-features-header h2 {
+        font-size: 32px;
+    }
+
+    .tours-features-header p {
+        font-size: 16px;
+    }
+
+    .tours-feature-card {
+        padding: 30px;
+    }
+
+    .feature-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 28px;
+    }
+
+}

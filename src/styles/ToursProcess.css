@@ -1,0 +1,121 @@
+.tours-process {
+    padding: 110px 20px;
+    background: #f8f9fb;
+}
+
+.tours-process-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tours-process-header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 70px;
+}
+
+.tours-process-header span {
+    display: inline-block;
+    color: #d4af37;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.tours-process-header h2 {
+    font-size: 48px;
+    color: #111111;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.tours-process-header p {
+    color: #666666;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.tours-process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.process-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+    transition: all .35s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .12);
+}
+
+.process-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #d4af37;
+    color: #111111;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.process-card h3 {
+    color: #111111;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.process-card p {
+    color: #666666;
+    line-height: 1.8;
+}
+
+@media (max-width: 992px) {
+
+    .tours-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tours-process-header h2 {
+        font-size: 38px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .tours-process {
+        padding: 80px 20px;
+    }
+
+    .tours-process-header h2 {
+        font-size: 32px;
+    }
+
+    .tours-process-header p {
+        font-size: 16px;
+    }
+
+    .process-card {
+        padding: 30px;
+    }
+
+    .process-number {
+        width: 64px;
+        height: 64px;
+        font-size: 22px;
+    }
+
+}
