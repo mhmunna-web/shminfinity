@@ -28,13 +28,9 @@ function FleetCard({ car }) {
 
           <p>⚙️ {car.transmission}</p>
 
-          <p>⛽ {car.fuel}</p>
+          <p>⚡ {car.fuel}</p>
 
         </div>
-
-        <button className="fleet-btn">
-          Book Now
-        </button>
 
       </div>
 

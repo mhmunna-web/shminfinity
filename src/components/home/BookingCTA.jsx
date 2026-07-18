@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../../styles/bookingCTA.css";
 
 function BookingCTA() {
@@ -17,12 +18,12 @@ function BookingCTA() {
 
         <div className="booking-buttons">
 
-          <a
-            href="#contact"
+          <Link
+            to="/booking"
             className="booking-btn booking-primary"
           >
             Book Now
-          </a>
+          </Link>
 
           <a
             href="https://wa.me/358449408543"

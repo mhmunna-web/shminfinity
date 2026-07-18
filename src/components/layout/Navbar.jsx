@@ -12,8 +12,6 @@ function Navbar() {
 
         <div className="navbar-container">
 
-          {/* Logo */}
-
           <Link
             to="/"
             className="logo"
@@ -46,6 +44,12 @@ function Navbar() {
             </li>
 
             <li>
+              <NavLink to="/driver-application">
+                Driver Application
+              </NavLink>
+            </li>
+
+            <li>
               <a href="/#about">About</a>
             </li>
 
@@ -59,16 +63,12 @@ function Navbar() {
 
           </ul>
 
-          {/* Book Button */}
-
           <Link
             to="/booking"
             className="book-btn"
           >
             Book Now
           </Link>
-
-          {/* Mobile Menu Button */}
 
           <button
             className="hamburger"
@@ -96,6 +96,10 @@ function Navbar() {
         <a href="/#services" onClick={closeMenu}>
           Services
         </a>
+
+        <NavLink to="/driver-application" onClick={closeMenu}>
+          Driver Application
+        </NavLink>
 
         <a href="/#about" onClick={closeMenu}>
           About
