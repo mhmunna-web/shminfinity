@@ -74,7 +74,8 @@ const Services = () => {
         Our Premium Services
       </SectionTitle>
 
-      <div className="services-container">        {services.map((service, index) => (
+      <div className="services-container">
+        {services.map((service, index) => (
           <div
             className="service-card"
             key={index}

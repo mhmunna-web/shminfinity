@@ -9,9 +9,7 @@ function Navbar() {
   return (
     <>
       <header className="navbar">
-
         <div className="navbar-container">
-
           <Link
             to="/"
             className="logo"
@@ -30,7 +28,6 @@ function Navbar() {
           {/* Desktop Menu */}
 
           <ul className="nav-links">
-
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
@@ -48,7 +45,9 @@ function Navbar() {
             </li>
 
             <li>
-              <NavLink to="/booking">Booking</NavLink>
+              <NavLink to="/booking">
+                Booking
+              </NavLink>
             </li>
 
             <li>
@@ -62,15 +61,7 @@ function Navbar() {
                 Support
               </NavLink>
             </li>
-
           </ul>
-
-          <Link
-            to="/booking"
-            className="book-btn"
-          >
-            Book Now
-          </Link>
 
           <button
             className="hamburger"
@@ -78,15 +69,12 @@ function Navbar() {
           >
             ☰
           </button>
-
         </div>
-
       </header>
 
       {/* Mobile Menu */}
 
       <div className={menuOpen ? "mobile-menu active" : "mobile-menu"}>
-
         <NavLink to="/" onClick={closeMenu}>
           Home
         </NavLink>
@@ -114,7 +102,6 @@ function Navbar() {
         <NavLink to="/contact" onClick={closeMenu}>
           Support
         </NavLink>
-
       </div>
     </>
   );

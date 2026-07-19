@@ -77,26 +77,43 @@
     color:#d4af37;
 }
 
-/* ================= Book Button ================= */
+/* ================= Language Switcher ================= */
 
-.book-btn{
+.navbar-actions{
     display:flex;
     align-items:center;
     justify-content:center;
     flex-shrink:0;
-    padding:14px 32px;
-    border-radius:50px;
-    background:#d4af37;
-    color:#000;
-    text-decoration:none;
-    font-size:17px;
+    margin-left:20px;
+}
+
+.language-switcher{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.language-switcher button{
+    background:transparent;
+    border:1px solid rgba(212,175,55,.35);
+    color:#fff;
+    padding:10px 14px;
+    border-radius:30px;
+    font-size:14px;
     font-weight:700;
+    cursor:pointer;
     transition:.3s;
 }
 
-.book-btn:hover{
-    background:#f4d35e;
-    transform:translateY(-2px);
+.language-switcher button:hover{
+    background:#d4af37;
+    color:#000;
+}
+
+.language-switcher button.active{
+    background:#d4af37;
+    color:#000;
+    border-color:#d4af37;
 }
 
 /* ================= Mobile ================= */
@@ -145,8 +162,11 @@
 
 @media (max-width:992px){
 
-    .nav-links,
-    .book-btn{
+    .nav-links{
+        display:none;
+    }
+
+    .navbar-actions{
         display:none;
     }
 
