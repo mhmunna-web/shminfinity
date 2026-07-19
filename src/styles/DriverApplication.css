@@ -1,0 +1,450 @@
+/* ===========================
+   Driver Application
+=========================== */
+
+.driver-page {
+  background: #050505;
+  color: #fff;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+
+.driver-hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px;
+  background: url("/images/driver/driver-hero.jpg") center/cover no-repeat;
+  overflow: hidden;
+}
+
+.driver-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.82)
+  );
+}
+
+.driver-hero-content {
+  position: relative;
+  max-width: 850px;
+  z-index: 2;
+}
+
+.driver-tag {
+  display: inline-block;
+  color: #d4af37;
+  border: 1px solid rgba(212,175,55,.35);
+  padding: 10px 24px;
+  border-radius: 40px;
+  font-size: .9rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.driver-hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.driver-hero h1 span {
+  color: #d4af37;
+}
+
+.driver-hero p {
+  color: #cfcfcf;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+}
+
+.driver-btn {
+  background: #d4af37;
+  color: #000;
+  border: none;
+  padding: 15px 38px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: .35s;
+}
+
+.driver-btn:hover {
+  background: #f2cb56;
+  transform: translateY(-3px);
+}
+
+/* ===========================
+   Common Section
+=========================== */
+
+.section-header {
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header span {
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: .85rem;
+}
+
+.section-header h2 {
+  font-size: 2.6rem;
+  margin: 15px 0;
+}
+
+.section-header p {
+  color: #bdbdbd;
+  line-height: 1.8;
+}/* ===========================
+   Why Join Section
+=========================== */
+
+.why-join {
+  padding: 100px 20px;
+  background: #0b0b0b;
+}
+
+.why-join-grid {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.join-card {
+  background: #111;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 20px;
+  padding: 35px 28px;
+  text-align: center;
+  transition: all 0.35s ease;
+}
+
+.join-card:hover {
+  transform: translateY(-10px);
+  border-color: #d4af37;
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+}
+
+.join-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+}
+
+.join-card h3 {
+  color: #fff;
+  font-size: 1.35rem;
+  margin-bottom: 15px;
+}
+
+.join-card p {
+  color: #bfbfbf;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.join-card strong {
+  color: #d4af37;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 992px) {
+
+  .why-join-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+
+  .why-join {
+    padding: 80px 20px;
+  }
+
+  .why-join-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .join-card {
+    padding: 30px 24px;
+  }
+
+  .join-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+  }
+
+}/* ===========================
+   Quick Application
+=========================== */
+
+.application-section {
+  padding: 100px 20px;
+  background: #050505;
+}
+
+.application-form {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #111;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 20px;
+  padding: 45px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group h3 {
+  color: #d4af37;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.form-group label {
+  color: #fff;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 15px 18px;
+  background: #1a1a1a;
+  border: 1px solid #2b2b2b;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: #888;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 8px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.radio-group input[type="radio"] {
+  accent-color: #d4af37;
+  width: 18px;
+  height: 18px;
+}
+
+.application-form .driver-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 16px;
+  font-size: 1rem;
+}
+
+/* ===========================
+   Responsive Form
+=========================== */
+
+@media (max-width: 768px) {
+
+  .application-section {
+    padding: 80px 20px;
+  }
+
+  .application-form {
+    grid-template-columns: 1fr;
+    padding: 30px 22px;
+    gap: 20px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+}/* ===========================
+   Thank You Section
+=========================== */
+
+.thank-you-section {
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #0b0b0b 0%, #050505 100%);
+}
+
+.thank-you-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background: #111;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 20px;
+  padding: 60px 40px;
+}
+
+.thank-you-content span {
+  display: inline-block;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: .9rem;
+  margin-bottom: 15px;
+}
+
+.thank-you-content h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.thank-you-content p {
+  color: #bdbdbd;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  margin-bottom: 35px;
+}
+
+/* ===========================
+   Smooth Animation
+=========================== */
+
+.driver-btn,
+.join-card,
+.application-form,
+.thank-you-content {
+  transition: all .35s ease;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 992px) {
+
+  .driver-hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .driver-hero {
+    min-height: 75vh;
+    padding: 90px 20px;
+  }
+
+  .driver-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .driver-hero p {
+    font-size: 1rem;
+  }
+
+  .driver-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .section-header h2 {
+    font-size: 1.9rem;
+  }
+
+  .thank-you-content {
+    padding: 40px 25px;
+  }
+
+  .thank-you-content h2 {
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .driver-hero h1 {
+    font-size: 2rem;
+  }
+
+  .driver-tag {
+    font-size: .8rem;
+    padding: 8px 18px;
+  }
+
+  .section-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .thank-you-content h2 {
+    font-size: 1.7rem;
+  }
+
+}

@@ -44,12 +44,6 @@ function Navbar() {
             </li>
 
             <li>
-              <NavLink to="/driver-application">
-                Driver Application
-              </NavLink>
-            </li>
-
-            <li>
               <a href="/#about">About</a>
             </li>
 
@@ -58,7 +52,15 @@ function Navbar() {
             </li>
 
             <li>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/driver-application">
+                Driver Application
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/contact">
+                Support
+              </NavLink>
             </li>
 
           </ul>
@@ -97,10 +99,6 @@ function Navbar() {
           Services
         </a>
 
-        <NavLink to="/driver-application" onClick={closeMenu}>
-          Driver Application
-        </NavLink>
-
         <a href="/#about" onClick={closeMenu}>
           About
         </a>
@@ -109,8 +107,12 @@ function Navbar() {
           Booking
         </NavLink>
 
+        <NavLink to="/driver-application" onClick={closeMenu}>
+          Driver Application
+        </NavLink>
+
         <NavLink to="/contact" onClick={closeMenu}>
-          Contact
+          Support
         </NavLink>
 
       </div>

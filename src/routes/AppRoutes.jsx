@@ -9,6 +9,7 @@ import AirportTransfer from "../pages/AirportTransfer";
 import LongDistance from "../pages/LongDistance";
 import BusinessPrivateTravel from "../pages/BusinessPrivateTravel";
 import ToursFamilyTravel from "../pages/ToursFamilyTravel";
+import DriverApplication from "../pages/DriverApplication";
 
 const AppRoutes = () => {
   return (
@@ -42,6 +43,11 @@ const AppRoutes = () => {
         <Route
           path="/booking"
           element={<Booking />}
+        />
+
+        <Route
+          path="/driver-application"
+          element={<DriverApplication />}
         />
 
         <Route
