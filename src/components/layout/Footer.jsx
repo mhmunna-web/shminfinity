@@ -12,14 +12,14 @@ const Footer = () => {
           </h2>
 
           <p>
-            Premium transportation services across Finland.
+            Busiess ID:3539331-8
             <br />
             Your journey, our commitment.
           </p>
         </div>
 
         <div className="footer-center">
-          <p>© 2025 SHM Infinity. All Rights Reserved.</p>
+          <p>© 2026 SHM Infinity. All Rights Reserved.</p>
         </div>
 
         <div className="footer-right">
