@@ -1,3 +1,5 @@
+import SEO from "../components/seo/SEO";
+
 import BusinessPrivateHero from "../components/services/business-private/BusinessPrivateHero";
 import BusinessPrivateOverview from "../components/services/business-private/overview/BusinessPrivateOverview";
 import BusinessPrivateFeatures from "../components/services/business-private/features/BusinessPrivateFeatures";
@@ -8,17 +10,26 @@ import BusinessPrivateCTA from "../components/services/business-private/cta/Busi
 const BusinessPrivateTravel = () => {
   return (
     <>
-      <BusinessPrivateHero />
+      <SEO
+        title="Business & Private Travel | SHM Infinity"
+        description="Executive business travel and private chauffeur services across Finland. Luxury vehicles, professional drivers, airport transfers, corporate transportation, and premium travel experiences."
+        keywords="Business Travel Finland, Executive Taxi Finland, Corporate Taxi, Private Chauffeur Finland, Luxury Taxi, Business Transportation, Premium Taxi, SHM Infinity"
+        url="https://www.shminfinity.fi/services/business-travel"
+      />
 
-      <BusinessPrivateOverview />
+      <main>
+        <BusinessPrivateHero />
 
-      <BusinessPrivateFeatures />
+        <BusinessPrivateOverview />
 
-      <BusinessPrivateBenefits />
+        <BusinessPrivateFeatures />
 
-      <BusinessPrivateProcess />
+        <BusinessPrivateBenefits />
 
-      <BusinessPrivateCTA />
+        <BusinessPrivateProcess />
+
+        <BusinessPrivateCTA />
+      </main>
     </>
   );
 };

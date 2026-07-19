@@ -11,7 +11,7 @@ const services = [
     title: "Airport Transfer",
     image: airportImg,
     description:
-      "Premium airport pickup and drop-off service from Helsinki Airport to any destination in Finland.",
+      "Premium airport pickup and drop-off service between Helsinki Airport and destinations across Finland.",
     features: [
       "Airport Pickup",
       "Airport Drop-off",
@@ -19,13 +19,13 @@ const services = [
       "24/7 Airport Service",
     ],
     link: "/services/airport-transfer",
+    alt: "Airport transfer taxi service at Helsinki Airport",
   },
-
   {
     title: "Taxi & Long Distance",
     image: longDistanceImg,
     description:
-      "Luxury long-distance taxi service with fixed-price travel across Finland.",
+      "Reliable long-distance and city taxi service with fixed-price transportation across Finland.",
     features: [
       "City Taxi",
       "Long Distance",
@@ -33,13 +33,13 @@ const services = [
       "Fixed Price Trips",
     ],
     link: "/services/long-distance",
+    alt: "Long distance premium taxi service in Finland",
   },
-
   {
     title: "Business & Private Travel",
     image: businessImg,
     description:
-      "Executive transportation for corporate clients, hotels and business meetings.",
+      "Executive transportation for business meetings, hotels, VIP guests and corporate travel.",
     features: [
       "Executive Transfer",
       "Corporate Travel",
@@ -47,13 +47,13 @@ const services = [
       "Event Transportation",
     ],
     link: "/services/business-travel",
+    alt: "Executive business travel and premium transportation service",
   },
-
   {
     title: "Tours & Family Travel",
     image: toursImg,
     description:
-      "Private sightseeing tours and family travel with premium comfort.",
+      "Comfortable private sightseeing tours and family travel with professional drivers throughout Finland.",
     features: [
       "Summer Tours",
       "Winter Tours",
@@ -61,6 +61,7 @@ const services = [
       "Child Seat Available",
     ],
     link: "/services/tours-family",
+    alt: "Private sightseeing and family travel service in Finland",
   },
 ];
 
@@ -69,21 +70,24 @@ const Services = () => {
     <section
       id="services"
       className="services"
+      aria-labelledby="services-title"
+      aria-label="Premium Taxi Services"
     >
-      <SectionTitle>
-        Our Premium Services
+      <SectionTitle id="services-title">
+        Our Premium Taxi Services
       </SectionTitle>
 
       <div className="services-container">
-        {services.map((service, index) => (
-          <div
+        {services.map((service) => (
+          <article
             className="service-card"
-            key={index}
+            key={service.title}
           >
             <div className="service-image">
               <img
                 src={service.image}
-                alt={service.title}
+                alt={service.alt}
+                loading="lazy"
               />
             </div>
 
@@ -93,8 +97,8 @@ const Services = () => {
               <p>{service.description}</p>
 
               <ul className="service-features">
-                {service.features.map((feature, i) => (
-                  <li key={i}>
+                {service.features.map((feature) => (
+                  <li key={feature}>
                     ✓ {feature}
                   </li>
                 ))}
@@ -103,11 +107,12 @@ const Services = () => {
               <Link
                 to={service.link}
                 className="service-btn"
+                aria-label={`Book ${service.title} service`}
               >
                 Book Now
               </Link>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>

@@ -1,14 +1,23 @@
 function FleetCard({ car }) {
   return (
-    <div className="fleet-card">
-
+    <article
+      className="fleet-card"
+      aria-label={`${car.name} premium taxi`}
+    >
       <div className="fleet-image">
-        <img src={car.image} alt={car.name} />
+        <img
+          src={car.image}
+          alt={`${car.name} ${car.year} ${car.color} premium taxi in Finland`}
+          loading="lazy"
+          decoding="async"
+        />
       </div>
 
       <div className="fleet-content">
-
-        <span className="fleet-badge">
+        <span
+          className="fleet-badge"
+          aria-label={`Vehicle category: ${car.type}`}
+        >
           {car.type}
         </span>
 
@@ -20,8 +29,10 @@ function FleetCard({ car }) {
           {car.year} • {car.color}
         </p>
 
-        <div className="fleet-specs">
-
+        <div
+          className="fleet-specs"
+          aria-label={`${car.name} specifications`}
+        >
           <p>👥 {car.passengers} Passengers</p>
 
           <p>🧳 {car.luggage} Luggage</p>
@@ -29,12 +40,9 @@ function FleetCard({ car }) {
           <p>⚙️ {car.transmission}</p>
 
           <p>⚡ {car.fuel}</p>
-
         </div>
-
       </div>
-
-    </div>
+    </article>
   );
 }
 

@@ -11,14 +11,20 @@ import "swiper/css/effect-coverflow";
 
 function FleetCarousel() {
   return (
-    <section id="fleet" className="fleet">
-
-      <SectionTitle>
+    <section
+      id="fleet"
+      className="fleet"
+      aria-labelledby="fleet-title"
+      aria-label="Luxury Taxi Fleet"
+    >
+      <SectionTitle id="fleet-title">
         Luxury Fleet
       </SectionTitle>
 
       <p className="section-subtitle">
-        Executive, Business and Premium vehicles for every journey.
+        Executive, business, and premium taxi vehicles for airport transfers,
+        business travel, city rides, and long-distance transportation across
+        Finland.
       </p>
 
       <Swiper
@@ -30,6 +36,7 @@ function FleetCarousel() {
         loop={true}
         speed={900}
         slidesPerView={"auto"}
+        aria-label="SHM Infinity luxury taxi fleet"
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -42,13 +49,15 @@ function FleetCarousel() {
         {fleetData.map((car) => (
           <SwiperSlide
             key={car.id}
-            style={{ width: "420px", maxWidth: "90vw" }}
+            style={{
+              width: "420px",
+              maxWidth: "90vw",
+            }}
           >
             <FleetCard car={car} />
           </SwiperSlide>
         ))}
       </Swiper>
-
     </section>
   );
 }

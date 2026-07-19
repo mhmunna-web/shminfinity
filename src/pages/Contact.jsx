@@ -1,3 +1,5 @@
+import SEO from "../components/seo/SEO";
+
 import "../styles/contact.css";
 
 import {
@@ -10,89 +12,121 @@ import {
 
 function Contact() {
   return (
-    <section className="contact-page">
+    <>
+      <SEO
+        title="Contact SHM Infinity | Premium Taxi Service Finland"
+        description="Contact SHM Infinity for premium taxi services across Helsinki, Vantaa, Espoo, and throughout Finland. Call, WhatsApp, email, or connect with us on social media."
+        keywords="Contact SHM Infinity, Taxi Contact Finland, Helsinki Taxi Contact, WhatsApp Taxi Finland, Premium Taxi Finland"
+        url="https://www.shminfinity.fi/contact"
+      />
 
-      <div className="contact-overlay"></div>
+      <main className="contact-page">
+        <div className="contact-overlay"></div>
 
-      <div className="contact-content">
+        <div className="contact-content">
+          <header className="contact-header">
+            <h1>Contact SHM Infinity</h1>
 
-        <div className="contact-header">
+            <p>Premium Taxi Service in Finland</p>
 
-          <h1>Contact SHM Infinity</h1>
+            <p>
+              We are available 24/7. Contact us anytime for bookings,
+              airport transfers, business travel, or general enquiries.
+            </p>
+          </header>
 
-          <p>Premium Taxi Service in Finland</p>
-
-          <p>
-            We are available 24/7.
-            Contact us anytime for bookings or enquiries.
-          </p>
-
-        </div>
-
-        <div className="contact-container">
-
-          <a href="tel:+35841291840" className="contact-card">
-            <FaPhoneAlt className="contact-icon" />
-            <div>
-              <h3>Phone</h3>
-              <p>+358 41 291 8840</p>
-            </div>
-          </a>
-
-          <a href="mailto:shminfinity@gmail.com" className="contact-card">
-            <FaEnvelope className="contact-icon" />
-            <div>
-              <h3>Email</h3>
-              <p>shminfinity@gmail.com</p>
-            </div>
-          </a>
-
-          <a
-            href="https://wa.me/358449408543"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-card"
+          <section
+            className="contact-container"
+            aria-label="Contact information"
           >
-            <FaWhatsapp className="contact-icon" />
-            <div>
-              <h3>WhatsApp</h3>
-              <p>Chat with us instantly</p>
-            </div>
-          </a>
+            <a
+              href="tel:+358413291840"
+              className="contact-card"
+              aria-label="Call SHM Infinity"
+            >
+              <FaPhoneAlt
+                className="contact-icon"
+                aria-hidden="true"
+              />
 
-          <div className="follow-box">
+              <div>
+                <h2>Phone</h2>
+                <p>+358413291840</p>
+              </div>
+            </a>
 
-            <h2>Follow Us</h2>
+            <a
+              href="mailto:shminfinity@gmail.com"
+              className="contact-card"
+              aria-label="Email SHM Infinity"
+            >
+              <FaEnvelope
+                className="contact-icon"
+                aria-hidden="true"
+              />
 
-            <div className="social-links">
+              <div>
+                <h2>Email</h2>
+                <p>shminfinity@gmail.com</p>
+              </div>
+            </a>
 
-              <a
-                href="https://facebook.com/shminfinity"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaFacebookF className="social-icon" />
-                <span>Facebook</span>
-              </a>
+            <a
+              href="https://wa.me/358449408543?text=Hello%20SHM%20Infinity,%20I'd%20like%20to%20book%20a%20taxi."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-card"
+              aria-label="Chat with SHM Infinity on WhatsApp"
+            >
+              <FaWhatsapp
+                className="contact-icon"
+                aria-hidden="true"
+              />
 
-              <a
-                href="https://instagram.com/shminfinity"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram className="social-icon" />
-                <span>Instagram</span>
-              </a>
+              <div>
+                <h2>WhatsApp</h2>
+                <p>Chat with us instantly</p>
+              </div>
+            </a>
 
-            </div>
+            <section
+              className="follow-box"
+              aria-labelledby="follow-title"
+            >
+              <h2 id="follow-title">Follow Us</h2>
 
-          </div>
+              <div className="social-links">
+                <a
+                  href="https://facebook.com/shminfinity"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit SHM Infinity Facebook page"
+                >
+                  <FaFacebookF
+                    className="social-icon"
+                    aria-hidden="true"
+                  />
+                  <span>Facebook</span>
+                </a>
 
+                <a
+                  href="https://instagram.com/shminfinity"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit SHM Infinity Instagram page"
+                >
+                  <FaInstagram
+                    className="social-icon"
+                    aria-hidden="true"
+                  />
+                  <span>Instagram</span>
+                </a>
+              </div>
+            </section>
+          </section>
         </div>
-
-      </div>
-
-    </section>
+      </main>
+    </>
   );
 }
 

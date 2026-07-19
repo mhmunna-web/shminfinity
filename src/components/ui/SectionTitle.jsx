@@ -1,6 +1,13 @@
-const SectionTitle = ({ children }) => {
+const SectionTitle = ({
+  children,
+  id,
+  className = "",
+}) => {
   return (
-    <h2 className="section-title">
+    <h2
+      id={id}
+      className={`section-title ${className}`.trim()}
+    >
       {children}
     </h2>
   );
