@@ -5,8 +5,8 @@ import { HelmetProvider } from "react-helmet-async";
 import ReactGA from "react-ga4";
 import clarity from "@microsoft/clarity";
 
-import "./index.css";
 import App from "./App.jsx";
+import "./index.css";
 
 // Google Analytics 4
 ReactGA.initialize("G-H0B9RR0W0V");

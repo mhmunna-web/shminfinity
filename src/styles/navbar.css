@@ -77,6 +77,61 @@
     color:#d4af37;
 }
 
+/* ================= Admin Button ================= */
+
+.nav-admin{
+    position:relative;
+}
+
+.nav-admin-button{
+    background:transparent;
+    border:1px solid rgba(212,175,55,.35);
+    color:#fff;
+    padding:10px 14px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.nav-admin-button:hover{
+    background:#d4af37;
+    color:#000;
+    border-color:#d4af37;
+}
+
+/* ================= Admin Dropdown ================= */
+
+.admin-dropdown{
+    position:absolute;
+    top:calc(100% + 10px);
+    right:0;
+    width:150px;
+    background:#0b0b0b;
+    border:1px solid rgba(212,175,55,.35);
+    border-radius:12px;
+    padding:8px;
+    box-shadow:0 10px 30px rgba(0,0,0,.45);
+    z-index:10000;
+}
+
+.admin-dropdown a{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    padding:11px 12px;
+    border-radius:8px;
+    font-size:15px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.admin-dropdown a:hover{
+    background:#d4af37;
+    color:#000;
+}
+
 /* ================= Language Switcher ================= */
 
 .navbar-actions{
@@ -156,6 +211,37 @@
 
 .mobile-menu a:hover{
     color:#d4af37;
+}
+
+/* ================= Mobile Admin ================= */
+
+.mobile-admin-button{
+    width:fit-content;
+    background:transparent;
+    border:1px solid rgba(212,175,55,.35);
+    color:#fff;
+    padding:10px 14px;
+    border-radius:30px;
+    font-size:20px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.mobile-admin-button:hover{
+    background:#d4af37;
+    color:#000;
+}
+
+.mobile-admin-dropdown{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    padding-left:10px;
+}
+
+.mobile-admin-dropdown a{
+    font-size:18px;
 }
 
 /* ================= Responsive ================= */
